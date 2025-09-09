@@ -1,0 +1,8 @@
+credentials.txt
+
+.idea/
+.ipynb_checkpoints
+data
+models
+model_images
+rendered_images.pkl
