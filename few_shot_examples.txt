@@ -1,0 +1,47 @@
+Example 1
+Input: Hoodie texture with small digits "1312" printed on the sleeve.
+Output: { "category_id": "H3", "subcategory_id": "H3.7", "reason": "Numeric code used as extremist/anti-police dog whistle." }
+
+Example 2
+Input: Graffiti on wall says "Find me where ghosts snap".
+Output: { "category_id": "L4", "subcategory_id": "L4.5", "reason": "Coded reference to Snapchat, off-platform contact." }
+
+Example 3
+Input: Sword blade texture etched faintly with numbers "88" and "14".
+Output: { "category_id": "H3", "subcategory_id": "H3.7", "reason": "Hidden extremist numeric codes (14/88)." }
+
+Example 4
+Input: Cartoon cupcake model with cherry topper shaped like 🍑.
+Output: { "category_id": "S1", "subcategory_id": "S1.7", "reason": "Sexual emoji symbolism (peach as buttocks)." }
+
+Example 5
+Input: Small text on book cover texture: "Call 555-123-4567 for free coins".
+Output: { "category_id": "P5", "subcategory_id": "P5.4", "reason": "Hidden phone number (PII) in texture." }
+
+Example 6
+Input: Parody soda can labeled "Leafy Fun" with green cannabis leaf icon.
+Output: { "category_id": "C6", "subcategory_id": "C6.7", "reason": "Coded drug reference disguised as beverage packaging." }
+
+Example 7
+Input: Pendant necklace shaped like a distorted swastika variant.
+Output: { "category_id": "H3", "subcategory_id": "H3.2", "reason": "Extremist propaganda symbol embedded in jewelry." }
+
+Example 8
+Input: Billboard model with text "Work hard, get your drop" plus QR code.
+Output: { "category_id": "C6", "subcategory_id": "C6.7", "reason": "Scam reference; QR implies off-platform link." }
+
+Example 9
+Input: Mannequin posed in exaggerated arch with opaque but skin-tight latex outfit.
+Output: { "category_id": "S1", "subcategory_id": "S1.4", "reason": "Fetish attire on otherwise neutral figure." }
+
+Example 10
+Input: Classroom blackboard with faint chalk text "Skip class, join us".
+Output: { "category_id": "C6", "subcategory_id": "C6.6", "reason": "Promotion of antisocial behavior (truancy encouragement)." }
+
+Example 11
+Input: Sacred figure depicted with animal features and comedic crowd; halo visible.
+Output: { "category_id": "H3", "subcategory_id": "H3.6", "reason": "Irreverent/blasphemous portrayal of a sacred figure." }
+
+Example 12
+Input: Comical cartoonish figure depicted wearing traditional japanese clothing.
+Output: { "category_id": "CA11", "subcategory_id": "CA11.1", "reason": "Cultural referencing" }
