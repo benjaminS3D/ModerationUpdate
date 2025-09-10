@@ -28,7 +28,7 @@
       ]
     },
     {
-      "id": "H3",
+      "id": "HE3",
       "name": "Hate & Extremism (Non-Negotiable)",
       "default_enforcement": "BLOCK",
       "subcategories": [
@@ -112,6 +112,7 @@
     {
       "id": "E10",
       "name": "Error, Refusal",
+      "default_enforcement": "BLOCK",
       "subcategories": [
         {"id": "E10.1","name":"Error","examples":[""]},
         {"id": "E10.2","name":"Refusal","examples":["knock-off","API refused content"]}
@@ -120,11 +121,13 @@
     {
       "id": "CR10",
       "name": "Cultural & Religious Respect (Clear Violations)",
-      "default_enforcement": "REQUIRE_EDITS",
+      "default_enforcement": "BLOCK",
       "subcategories": [
-        {"id": "CR10.1","name":"Cultural Appropriation (Clear)","examples":["sacred headdress as costume","racial caricature"]},
-        {"id": "CR10.2","name":"Religious Desecration (Clear)","examples":["holy book defaced","altar used as prop","sacred symbols in profane context"]},
-        {"id": "CR10.3","name":"National / Ethnic Insults (Non-Hate)","examples":["demeaning national symbols without protected-class slurs"]}
+        {"id": "CR10.1","name":"Cultural Appropriation","examples":["sacred headdress as costume","racial caricature", "ethnic/cultural caricature"]},
+        {"id": "CR10.2","name":"Religious Desecration","examples":["holy book defaced","altar used as prop","sacred symbols in profane context", "sacred dress used in a mocking context"]},
+        {"id": "CR10.3","name":"National / Ethnic Insults (Non-Hate)","examples":["demeaning national symbols without protected-class slurs"]},
+        {"id": "CA10.4","name":"Satire/Parody of religious figure or objects","examples":["anthropomorphic animal resembling a religious figure preaching from a pulpit", "religious statues in inappropriate outfit"]},
+        {"id": "CA10.5","name":"Religious Referencing","examples":["sacred object", "religious figure"]}
       ]
     },
     {
@@ -135,15 +138,31 @@
         {"id": "CA11.1","name":"Ambiguous Cultural Referencing","examples":["fantasy headdress reminiscent of Indigenous regalia"]},
         {"id": "CA11.2","name":"Fusion/Costume with Possible Sacred Motifs","examples":["festival outfit echoing religious attire"]},
         {"id": "CA11.3","name":"Satire/Parody with Unclear Target","examples":["cartoon trope that might map to an ethnicity"]},
-        {"id": "CA11.4","name":"Fictional Culture Closely Resembling Real Group","examples":["imagined symbols/colors strongly mirroring a real community"]}
+        {"id": "CA11.4","name":"Fictional Culture Closely Resembling Real Group","examples":["imagined symbols/colors strongly mirroring a real community"]},
+        {"id": "CA11.5","name":"Ambiguous Religious Referencing","examples":["object that could be seen as resembling sacred object depending on the context ", "characters that could be seen as resembling religious figures"]}
       ]
     },
     {
       "id": "HR12",
-      "name": "Harassment & Bullying (Non-Protected)",
-      "default_enforcement": "REQUIRE_EDITS",
+      "name": "Harassment & Bullying (Ambiguous / Mild)",
+      "default_enforcement": "REVIEW",
       "subcategories": [
-        {"id": "HR4.1","name":"Cyberbullying & Abuse","examples":["mocking avatar","body shaming","personal attacks"]}
+        {"id": "HR12.1", "name": "General Insults / Teasing (Non-Targeted)", "examples": ["graffiti 'loser'", "noob", "baby", "get good"]},
+        {"id": "HR12.2", "name": "Appearance or Skill Mockery (Non-Protected)", "examples": ["fat/skinny jokes", "mocking gameplay skill", "cartoon exaggerations that may be insulting"]},
+        {"id": "HR12.3", "name": "Taunting Gestures or Emotes", "examples": ["point-and-laugh emote", "teasing sign", "targeted pointing arrows without slurs"]}
+
+      ]
+    },
+    {
+      "id": "B13",
+      "name": "Bullying (Severe / Clear)",
+      "default_enforcement": "BLOCK",
+      "subcategories": [
+        {"id": "B13.1", "name": "Direct Abuse or Threats", "examples": ["kill yourself", "I will hurt you", "you should die"]},
+        {"id": "B13.2", "name": "Targeted Harassment of a Private Person", "examples": ["avatar sign targeting a classmate by name", "personal attack paired with identifiable likeness"]},
+        {"id": "B13.3", "name": "Harassment with PII or Doxxing Linkage", "examples": ["insults + phone number", "insults + address", "tagging a victim with contact handle"]},
+        {"id": "B13.4", "name": "Sexualized or Violent Harassment", "examples": ["sexual insults", "graphic threats", "harassment using violent imagery"]}
+
       ]
     }
   ],
