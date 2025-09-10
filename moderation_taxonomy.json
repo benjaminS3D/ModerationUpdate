@@ -30,7 +30,6 @@
     {
       "id": "HE3",
       "name": "Hate & Extremism (Non-Negotiable)",
-      "default_enforcement": "BLOCK",
       "subcategories": [
         {"id": "HE3.1","name":"Terrorism & Extremism","examples":["militant uniforms","propaganda","terror flags"]},
         {"id": "HE3.2","name":"Extremist Symbols / Propaganda","examples":["swastika","KKK robes","hate group logos"]},
@@ -112,7 +111,6 @@
     {
       "id": "E10",
       "name": "Error, Refusal",
-      "default_enforcement": "BLOCK",
       "subcategories": [
         {"id": "E10.1","name":"Error","examples":[""]},
         {"id": "E10.2","name":"Refusal","examples":["knock-off","API refused content"]}
@@ -121,7 +119,6 @@
     {
       "id": "CR10",
       "name": "Cultural & Religious Respect (Clear Violations)",
-      "default_enforcement": "BLOCK",
       "subcategories": [
         {"id": "CR10.1","name":"Cultural Appropriation","examples":["sacred headdress as costume","racial caricature", "ethnic/cultural caricature"]},
         {"id": "CR10.2","name":"Religious Desecration","examples":["holy book defaced","altar used as prop","sacred symbols in profane context", "sacred dress used in a mocking context"]},
@@ -133,7 +130,6 @@
     {
       "id": "CA11",
       "name": "Contextual / Ambiguous Cultural Sensitivity",
-      "default_enforcement": "REVIEW",
       "subcategories": [
         {"id": "CA11.1","name":"Ambiguous Cultural Referencing","examples":["fantasy headdress reminiscent of Indigenous regalia"]},
         {"id": "CA11.2","name":"Fusion/Costume with Possible Sacred Motifs","examples":["festival outfit echoing religious attire"]},
@@ -145,7 +141,6 @@
     {
       "id": "HR12",
       "name": "Harassment & Bullying (Ambiguous / Mild)",
-      "default_enforcement": "REVIEW",
       "subcategories": [
         {"id": "HR12.1", "name": "General Insults / Teasing (Non-Targeted)", "examples": ["graffiti 'loser'", "noob", "baby", "get good"]},
         {"id": "HR12.2", "name": "Appearance or Skill Mockery (Non-Protected)", "examples": ["fat/skinny jokes", "mocking gameplay skill", "cartoon exaggerations that may be insulting"]},
@@ -156,7 +151,6 @@
     {
       "id": "B13",
       "name": "Bullying (Severe / Clear)",
-      "default_enforcement": "BLOCK",
       "subcategories": [
         {"id": "B13.1", "name": "Direct Abuse or Threats", "examples": ["kill yourself", "I will hurt you", "you should die"]},
         {"id": "B13.2", "name": "Targeted Harassment of a Private Person", "examples": ["avatar sign targeting a classmate by name", "personal attack paired with identifiable likeness"]},
@@ -166,6 +160,5 @@
       ]
     }
   ],
-  "auto_block_subcategories": ["S1.2","S1.7","V2.3","H3.2","H3.7","P5.1","C6.5"],
   "notes": "Do not invent categories. Always map findings to IDs above. Use examples as hints only, not exhaustive lists."
 }
