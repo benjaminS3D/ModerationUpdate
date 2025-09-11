@@ -82,3 +82,82 @@ Example 29
 Input: Satirical cartoon figure depicted wearing traditional japanese clothing.
 Output: { "category_id": "CR10", "subcategory_id": "CR10.1", "reason": "Cultural appropriation and ethnic/cultural caricature" }
 
+Example A
+Input: Festival outfit with structured plume headpiece, geometric bead bands, and sash with ritual-like patterns.
+Output: { "category_id": "CR10", "subcategory_id": "CR10.1", "reason": "Recognizable ceremonial regalia elements used as costume." }
+
+Example B
+Input: Fashion dress printed with repeated sacred symbol patterns used in lingerie styling.
+Output: { "category_id": "CR10", "subcategory_id": "CR10.2", "reason": "Sacred symbols sexualized in apparel." }
+
+Example C
+Input: Decorative room prop includes a raised platform with candles and framed icon arranged like an altar.
+Output: { "category_id": "CR10", "subcategory_id": "CR10.2", "reason": "Religious setting repurposed as decor/prop." }
+
+Example D
+Input: Necklace of prayer beads used as a rocker accessory with stage outfit.
+Output: { "category_id": "CR10", "subcategory_id": "CR10.5", "reason": "Sacred object repurposed as entertainment fashion accessory." }
+
+Example E
+Input: Head covering and shoulder garment consistent with clerical vestments worn as a party costume.
+Output: { "category_id": "CR10", "subcategory_id": "CR10.1", "reason": "Clerical attire as costume (clear appropriation)." }
+
+Example F
+Input: Mask with stylized geometric patterns and colored plumes; unclear if it corresponds to a real tradition.
+Output: { "category_id": "CA11", "subcategory_id": "CA11.1", "reason": "Ambiguous cultural referencing; identity uncertain." }
+
+Example G
+Input: Hybrid festival costume mixing multiple symbolic motifs (moon/cross/wheel) without clear fidelity to any one faith.
+Output: { "category_id": "CA11", "subcategory_id": "CA11.2", "reason": "Fusion of possible sacred motifs; ambiguous." }
+
+Example H
+Input: Cartoon statue in comedic pose with robe-like garment; no identifiable iconography.
+Output: { "category_id": "CA11", "subcategory_id": "CA11.3", "reason": "Parody with unclear target; ambiguous." }
+
+Example I
+Input: Fantasy priest outfit with invented sigils and altar-like platform; resembles but does not match any real faith.
+Output: { "category_id": "CA11", "subcategory_id": "CA11.4", "reason": "Fictional culture closely resembling real practice; ambiguous." }
+
+Example J
+Input: Headband with a few colorful feathers and glitter boa used in a dance costume, no beadwork or distinctive patterns.
+Output: { "category_id": "NONE", "subcategory_id": "NONE", "reason": "Generic party accessories; no clear sacred/cultural elements." }
+
+Example K
+Input: Rug with intricate geometric patterns placed at doorway; positioned as floor mat, but lacks prayer-rug cues.
+Output: { "category_id": "CA11", "subcategory_id": "CA11.5", "reason": "Ambiguous religious referencing; insufficient fidelity." }
+
+Example L
+Input: Sculpture of a recognizable sacred symbol toppled and splattered with paint for comedic effect.
+Output: { "category_id": "CR10", "subcategory_id": "CR10.2", "reason": "Desecration of sacred symbol." }
+
+Example M
+Input: Fashion hoodie with repeating sacred symbols mixed with brand graphics.
+Output: { "category_id": "CR10", "subcategory_id": "CR10.5", "reason": "Sacred iconography used as entertainment/fashion graphic." }
+
+Example N
+Input: Cartoon face markings mimicking ritual patterns paired with regalia-like belt and sash.
+Output: { "category_id": "CR10", "subcategory_id": "CR10.1", "reason": "Distinctive regalia signals used as costume (clear)." }
+
+Example O
+Input: Abstract headpiece with feathers arranged irregularly, neon plastic materials, no beadwork or cultural geometry.
+Output: { "category_id": "CA11", "subcategory_id": "CA11.1", "reason": "Resembles regalia but lacks fidelity; ambiguous fallback." }
+
+Example C1
+Input: Character with a radial plume headpiece AND a wide beaded band plus a woven sash.
+Output: { "category_id": "CR10", "subcategory_id": "CR10.1", "reason": "Two+ high-fidelity regalia cues (structured plumes + beaded band + sash) used as costume." }
+
+Example C2
+Input: Performer outfit combining a stacked feather crown AND a beaded chestplate over a robe.
+Output: { "category_id": "CR10", "subcategory_id": "CR10.1", "reason": "Structured ceremonial headpiece and complementary ceremonial garment elements (2+ cues) as entertainment costume." }
+
+Example C3
+Input: Party costume with clerical-style vestments AND a stole bearing sacred motifs.
+Output: { "category_id": "CR10", "subcategory_id": "CR10.1", "reason": "Recognizable vestment layout with stole (2+ cues) used as costume." }
+
+Example C4
+Input: Fashion accessory set: prayer-style beads as necklace AND robe-like garment used for stage performance.
+Output: { "category_id": "CR10", "subcategory_id": "CR10.5", "reason": "Sacred objects repurposed as entertainment accessories." }
+
+Example C5
+Input: Mask with a few colorful feathers; no beadwork, no sash, no canonical structure.
+Output: { "category_id": "CA11", "subcategory_id": "CA11.1", "reason": "Single weak cue; identity/fidelity unclear → ambiguous fallback." }

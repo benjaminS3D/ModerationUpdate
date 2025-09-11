@@ -1,164 +1,153 @@
 {
-  "taxonomy_version": "2.0",
+  "taxonomy_version": "3.0",
   "categories": [
     {
       "id": "S1",
       "name": "Sexual / Adult Content",
       "subcategories": [
-        {"id": "S1.1","name":"Nudity","examples":["bare chest","exposed buttocks","see-through clothing"]},
-        {"id": "S1.2","name":"Sexual Activity","examples":["sex act","intercourse pose","simulated sex"]},
-        {"id": "S1.3","name":"Suggestive Sexuality","examples":["provocative pose","erotic attire","sexual innuendo"]},
-        {"id": "S1.4","name":"Fetish Attire / Inappropriate Costuming","examples":["latex suit","bondage gear","maid uniform"]},
-        {"id": "S1.5","name":"Sexual Objectification / Gender-Based Harassment","examples":["hypersexualized proportions","sexist tropes","objectified avatars"]},
-        {"id": "S1.6","name":"Inappropriate Gestures or Poses","examples":["thrusting","twerking","lewd hand sign"]},
-        {"id": "S1.7","name":"Coded / Symbolic Sexualization","examples":["🍆","🍑","💦","phallus-shaped object"]}
+        {"id": "S1.1", "name": "Nudity", "examples": ["bare chest", "exposed buttocks", "see-through clothing"]},
+        {"id": "S1.2", "name": "Sexual Activity", "examples": ["sex act", "intercourse pose", "simulated sex"]},
+        {"id": "S1.3", "name": "Suggestive Sexuality", "examples": ["provocative pose", "erotic attire", "sexual innuendo"]},
+        {"id": "S1.4", "name": "Fetish Attire / Inappropriate Costuming", "examples": ["latex suit", "bondage gear", "maid uniform"]},
+        {"id": "S1.5", "name": "Sexual Objectification / Gender-Based Harassment", "examples": ["hypersexualized proportions", "sexist tropes", "objectified avatars"]},
+        {"id": "S1.6", "name": "Inappropriate Gestures or Poses", "examples": ["thrusting", "twerking", "lewd hand sign"]},
+        {"id": "S1.7", "name": "Coded / Symbolic Sexualization", "examples": ["🍆", "🍑", "💦", "phallic/yonic object shapes"]}
       ]
     },
     {
       "id": "V2",
       "name": "Violence / Harm",
       "subcategories": [
-        {"id": "V2.1","name":"General Violence","examples":["weapons pointed","fighting pose","aggressive stance"]},
-        {"id": "V2.2","name":"Graphic Content","examples":["blood","gore","dismemberment"]},
-        {"id": "V2.3","name":"Self-Harm & Suicide","examples":["cutting","hanging","overdose"]},
-        {"id": "V2.4","name":"Romanticization of Harm","examples":["stylized self-harm","suicide as beautiful","glamorized trauma"]},
-        {"id": "V2.5","name":"Disturbing Imagery / Body Horror","examples":["mutations","grotesque features","exposed organs"]},
-        {"id": "V2.6","name":"Dangerous Imitation / Challenges","examples":["choking game","breath-holding challenge","unsafe stunt"]},
-        {"id": "V2.7","name":"Coded / Symbolic Violence","examples":["💀","🔪","gang signs","numeric codes like 1488"]}
+        {"id": "V2.1", "name": "General Violence", "examples": ["weapons pointed", "fighting pose", "aggressive stance"]},
+        {"id": "V2.2", "name": "Graphic Content", "examples": ["blood", "gore", "dismemberment"]},
+        {"id": "V2.3", "name": "Self-Harm & Suicide", "examples": ["cutting", "hanging", "overdose"]},
+        {"id": "V2.4", "name": "Romanticization of Harm", "examples": ["suicide portrayed as beautiful", "glamorized trauma"]},
+        {"id": "V2.5", "name": "Disturbing Imagery / Body Horror", "examples": ["mutations", "grotesque features", "exposed organs"]},
+        {"id": "V2.6", "name": "Dangerous Imitation / Challenges", "examples": ["choking game", "unsafe stunt", "breath-holding challenge"]},
+        {"id": "V2.7", "name": "Coded / Symbolic Violence", "examples": ["💀", "🔪", "gang signs", "numeric codes implying violence"]}
       ]
     },
     {
       "id": "HE3",
-      "name": "Hate & Extremism (Non-Negotiable)",
+      "name": "Hate & Extremism (Clear)",
       "subcategories": [
-        {"id": "HE3.1","name":"Terrorism & Extremism","examples":["militant uniforms","propaganda","terror flags"]},
-        {"id": "HE3.2","name":"Extremist Symbols / Propaganda","examples":["swastika","KKK robes","hate group logos"]},
-        {"id": "HE3.3","name":"Hate Speech (Protected Classes)","examples":["racist slur","homophobic insult","antisemitic slogan"]},
-        {"id": "HE3.4","name":"Coded Hate & Extremism","examples":["14","88","1312","dog whistles"]}
-      ]
-    },
-    {
-      "id": "L4",
-      "name": "Profanity, Language & Contact",
-      "subcategories": [
-        {"id": "L4.1","name":"Profanity","examples":["F***","S***","offensive slang"]},
-        {"id": "L4.2","name":"Sexually Explicit Text","examples":["dirty talk","written sex acts","sexual innuendo text"]},
-        {"id": "L4.3","name":"Violent / Abusive Language","examples":["kill yourself","I’ll hurt you","aggressive threats"]},
-        {"id": "L4.4","name":"Off-Platform Contact & Scannables","examples":["email","phone number","QR code","social handle"]},
-        {"id": "L4.5","name":"Coded Off-Platform Contact","examples":["find me where ghosts snap","bird app reference","invite code disguised"]}
-      ]
-    },
-    {
-      "id": "P5",
-      "name": "Privacy & Doxxing",
-      "subcategories": [
-        {"id": "P5.1","name":"Direct PII","examples":["phone number","address","email","real name"]},
-        {"id": "P5.2","name":"Geolocation & School Identifiers","examples":["school ID","street sign","map with location"]},
-        {"id": "P5.3","name":"Identifiable Likeness of Private Persons","examples":["portrait of non-public person","student photo","personal likeness"]},
-        {"id": "P5.4","name":"Hidden / Obfuscated PII","examples":["tiny numbers in graffiti","serial code as phone number","barcode with data"]}
-      ]
-    },
-    {
-      "id": "C6",
-      "name": "Illegal Activity / Crime",
-      "subcategories": [
-        {"id": "C6.1","name":"Drugs & Alcohol","examples":["joint","pill bottle","beer mug","marijuana leaf"]},
-        {"id": "C6.2","name":"Weapons","examples":["gun","knife","explosives","sword"]},
-        {"id": "C6.3","name":"Fraud / Hacking / Trafficking","examples":["credit card fraud","dark web reference","fake ID"]},
-        {"id": "C6.4","name":"Gambling","examples":["casino slot","poker table","betting tokens"]},
-        {"id": "C6.5","name":"Regulated Functional Designs","examples":["gun blueprint","3D-print weapon","explosive schematic"]},
-        {"id": "C6.6","name":"Promotion of Antisocial Behavior","examples":["graffiti of vandalism","truancy","petty theft glorified"]},
-        {"id": "C6.7","name":"Coded Criminal Content","examples":["🍄 for mushrooms","🚬 for smoking","🪙 for scams","gang numbers"]}
-      ]
-    },
-    {
-      "id": "A7",
-      "name": "Age-Restricted Products & Monetization",
-      "subcategories": [
-        {"id": "A7.1","name":"Alcohol","examples":["wine bottle","beer can","cocktail glass"]},
-        {"id": "A7.2","name":"Tobacco & Vapes","examples":["cigarette pack","vape pen","smoking pipe"]},
-        {"id": "A7.3","name":"Cannabis","examples":["marijuana leaf","joint","bong"]},
-        {"id": "A7.4","name":"Gambling & Casino Themes","examples":["slot machine","dice","roulette"]},
-        {"id": "A7.5","name":"Predatory Monetization","examples":["loot box","pay-to-win icon","child-targeted in-game purchase"]}
-      ]
-    },
-    {
-      "id": "T8",
-      "name": "Sensitive Psychological & Supernatural Themes",
-      "subcategories": [
-        {"id": "T8.1","name":"Occult / Supernatural Horror","examples":["pentagram","satanic symbol","possession imagery"]},
-        {"id": "T8.2","name":"Disturbing Psychological Themes","examples":["insanity depiction","nightmarish scene","madness visuals"]},
-        {"id": "T8.3","name":"Animal Cruelty","examples":["abused dog","animal torture","injured cat"]},
-        {"id": "T8.4","name":"Deepfakes / Impersonation of Private Persons","examples":["face-swap","fake celebrity model","altered portrait"]},
-        {"id": "T8.5","name":"Misinformation / Conspiracies","examples":["fake health cure","election denial","conspiracy symbol"]},
-        {"id": "T8.6","name":"Body Image / Eating Disorders","examples":["emaciated figure","glamorized starvation","extreme thinspo"]},
-        {"id": "T8.7","name":"Medical / Surgical Graphic Detail","examples":["surgical gore","open body","exposed organs"]},
-        {"id": "T8.8","name":"Bodily Fluids / Excretion","examples":["urine","feces","vomit"]},
-        {"id": "T8.9","name":"Seizure-Risk Visuals","examples":["strobe","flicker","rapid flashing lights"]}
-      ]
-    },
-    {
-      "id": "I9",
-      "name": "Copyright & Intellectual Property",
-      "subcategories": [
-        {"id": "I9.1","name":"Company Logos","examples":["Nike swoosh","Apple logo","game studio icon"]},
-        {"id": "I9.2","name":"Recognizable Characters or Products","examples":["Disney character","famous toy","game asset"]},
-        {"id": "I9.3","name":"Parodic / Satirical Infringement","examples":["knock-off","spoof of brand","meme version of IP"]},
-        {"id": "I9.4","name":"Hidden or Embedded Content","examples":["tiny logo","watermark","brand hidden in texture"]},
-        {"id": "I9.5","name":"Trade Dress / Look-Alike","examples":["Coca-Cola style label","fast food packaging","familiar color scheme"]}
-      ]
-    },
-    {
-      "id": "E10",
-      "name": "Error, Refusal",
-      "subcategories": [
-        {"id": "E10.1","name":"Error","examples":[""]},
-        {"id": "E10.2","name":"Refusal","examples":["knock-off","API refused content"]}
+        {"id": "HE3.1", "name": "Terrorism & Extremism", "examples": ["militant uniforms", "propaganda", "terror flags"]},
+        {"id": "HE3.2", "name": "Extremist Symbols / Propaganda", "examples": ["swastika variants", "KKK robes", "hate group logos"]},
+        {"id": "HE3.3", "name": "Hate Speech (Protected Classes)", "examples": ["racist slur", "homophobic insult", "antisemitic slogan"]},
+        {"id": "HE3.4", "name": "Coded Hate & Extremism", "examples": ["14", "88", "1312", "dog whistles"]}
       ]
     },
     {
       "id": "CR10",
       "name": "Cultural & Religious Respect (Clear Violations)",
       "subcategories": [
-        {"id": "CR10.1","name":"Cultural Appropriation","examples":["sacred headdress as costume","racial caricature", "ethnic/cultural caricature"]},
-        {"id": "CR10.2","name":"Religious Desecration","examples":["holy book defaced","altar used as prop","sacred symbols in profane context", "sacred dress used in a mocking context"]},
-        {"id": "CR10.3","name":"National / Ethnic Insults (Non-Hate)","examples":["demeaning national symbols without protected-class slurs"]},
-        {"id": "CA10.4","name":"Satire/Parody of religious figure or objects","examples":["anthropomorphic animal resembling a religious figure preaching from a pulpit", "religious statues in inappropriate outfit"]},
-        {"id": "CA10.5","name":"Religious Referencing","examples":["sacred object", "religious figure"]}
+        {"id": "CR10.1","name": "Cultural Appropriation (Clear)", "examples": ["recognizable Indigenous feathered warbonnet used as costume", "specific traditional regalia worn for fashion/cosplay", "ethnic/cultural caricature with distinctive attire elements"]},
+        {"id": "CR10.2","name": "Religious Desecration (Clear)", "examples": ["holy book defaced or used as decor", "altar/prayer space repurposed as prop/furniture", "sacred symbols used in profane/sexualized/violent context", "sacred dress used in a mocking or degrading context"]},
+        {"id": "CR10.3","name": "National / Ethnic Insults (Non-Hate)", "examples": ["demeaning national symbols without protected-class slurs", "mocking a nationality with insults not targeting a protected class"]},
+        {"id": "CR10.4","name": "Satire/Parody of Religious Figures or Objects (Clear)", "examples": ["recognizable religious figure depicted in degrading comedic scene", "religious statues dressed in clearly inappropriate outfits", "obvious parody of a sacred icon used for humor/derision"]},
+        {"id": "CR10.5","name": "Use of Sacred Symbols/Objects in Entertainment Context (Clear)", "examples": ["cross/Star of David/crescent/om/talismans used as fashion graphics", "rosary/prayer beads used as accessories", "prayer rug used as decorative floor mat"]}
       ]
     },
     {
       "id": "CA11",
       "name": "Contextual / Ambiguous Cultural Sensitivity",
       "subcategories": [
-        {"id": "CA11.1","name":"Ambiguous Cultural Referencing","examples":["fantasy headdress reminiscent of Indigenous regalia"]},
-        {"id": "CA11.2","name":"Fusion/Costume with Possible Sacred Motifs","examples":["festival outfit echoing religious attire"]},
-        {"id": "CA11.3","name":"Satire/Parody with Unclear Target","examples":["cartoon trope that might map to an ethnicity"]},
-        {"id": "CA11.4","name":"Fictional Culture Closely Resembling Real Group","examples":["imagined symbols/colors strongly mirroring a real community"]},
-        {"id": "CA11.5","name":"Ambiguous Religious Referencing","examples":["object that could be seen as resembling sacred object depending on the context ", "characters that could be seen as resembling religious figures"]}
+        {"id": "CA11.1","name": "Ambiguous Cultural Referencing", "examples": ["fantasy headdress loosely reminiscent of Indigenous regalia", "ornamentation that could map to a specific culture but is unclear"]},
+        {"id": "CA11.2","name": "Fusion/Costume with Possible Sacred Motifs", "examples": ["festival outfit echoing religious attire without clear identification", "hybrid costume borrowing stylistic cues from multiple traditions"]},
+        {"id": "CA11.3","name": "Satire/Parody with Unclear Target", "examples": ["cartoon trope that might map to an ethnicity or religion", "comedic scene hinting at a tradition but not clearly identifiable"]},
+        {"id": "CA11.4","name": "Fictional Culture Closely Resembling a Real Group", "examples": ["imagined symbols/colors strongly mirroring a known community", "invented clergy/temple aesthetics that resemble real traditions"]},
+        {"id": "CA11.5","name": "Ambiguous Religious Referencing", "examples": ["object that might be a sacred item depending on context", "character that might be read as a religious figure but not clear"]}
       ]
     },
     {
       "id": "HR12",
-      "name": "Harassment & Bullying (Ambiguous / Mild)",
+      "name": "Bullying & Harassment (Ambiguous / Mild)",
       "subcategories": [
-        {"id": "HR12.1", "name": "General Insults / Teasing (Non-Targeted)", "examples": ["graffiti 'loser'", "noob", "baby", "get good"]},
-        {"id": "HR12.2", "name": "Appearance or Skill Mockery (Non-Protected)", "examples": ["fat/skinny jokes", "mocking gameplay skill", "cartoon exaggerations that may be insulting"]},
-        {"id": "HR12.3", "name": "Taunting Gestures or Emotes", "examples": ["point-and-laugh emote", "teasing sign", "targeted pointing arrows without slurs"]}
-
+        {"id": "HR12.1", "name": "General Insults / Teasing (Non-Targeted)", "examples": ["'loser'", "noob", "baby", "get good"]},
+        {"id": "HR12.2", "name": "Appearance or Skill Mockery (Non-Protected)", "examples": ["fat/skinny jokes", "mocking gameplay skill", "insulting cartoon exaggerations"]},
+        {"id": "HR12.3", "name": "Taunting Gestures or Emotes", "examples": ["point-and-laugh emote", "teasing sign", "arrows at generic figure without slurs"]}
       ]
     },
     {
       "id": "B13",
-      "name": "Bullying (Severe / Clear)",
+      "name": "Bullying & Harassment (Severe / Clear)",
       "subcategories": [
-        {"id": "B13.1", "name": "Direct Abuse or Threats", "examples": ["kill yourself", "I will hurt you", "you should die"]},
-        {"id": "B13.2", "name": "Targeted Harassment of a Private Person", "examples": ["avatar sign targeting a classmate by name", "personal attack paired with identifiable likeness"]},
-        {"id": "B13.3", "name": "Harassment with PII or Doxxing Linkage", "examples": ["insults + phone number", "insults + address", "tagging a victim with contact handle"]},
-        {"id": "B13.4", "name": "Sexualized or Violent Harassment", "examples": ["sexual insults", "graphic threats", "harassment using violent imagery"]}
-
+        {"id": "B13.1", "name": "Direct Abuse or Threats", "examples": ["'kill yourself'", "'I will hurt you'", "explicit violent threats"]},
+        {"id": "B13.2", "name": "Targeted Harassment of a Private Person", "examples": ["insulting text with a classmate's name", "attack paired with identifiable likeness"]},
+        {"id": "B13.3", "name": "Harassment with PII or Doxxing Linkage", "examples": ["insults + phone number", "insults + address", "tagging victim with contact handle/QR"]},
+        {"id": "B13.4", "name": "Sexualized or Violent Harassment", "examples": ["sexual insults", "graphic abusive imagery", "harassment using violent visuals"]}
+      ]
+    },
+    {
+      "id": "L4",
+      "name": "Profanity, Language & Contact",
+      "subcategories": [
+        {"id": "L4.1", "name": "Profanity", "examples": ["F***", "S***", "offensive slang"]},
+        {"id": "L4.2", "name": "Sexually Explicit Text", "examples": ["written sex acts", "dirty talk", "sexual innuendo text"]},
+        {"id": "L4.3", "name": "Violent / Abusive Language", "examples": ["'kill yourself'", "'I'll hurt you'", "aggressive threats"]},
+        {"id": "L4.4", "name": "Off-Platform Contact & Scannables", "examples": ["email", "phone number", "social handle", "QR code"]},
+        {"id": "L4.5", "name": "Coded Off-Platform Contact", "examples": ["'find me where ghosts snap'", "bird-app reference", "invite code disguised"]}
+      ]
+    },
+    {
+      "id": "P5",
+      "name": "Privacy & Doxxing",
+      "subcategories": [
+        {"id": "P5.1", "name": "Direct PII", "examples": ["phone number", "address", "email", "real name"]},
+        {"id": "P5.2", "name": "Geolocation & School Identifiers", "examples": ["school name/crest", "street sign", "map with location"]},
+        {"id": "P5.3", "name": "Identifiable Likeness of Private Persons", "examples": ["portrait of non-public person", "student photo", "personal likeness"]},
+        {"id": "P5.4", "name": "Hidden / Obfuscated PII", "examples": ["tiny numbers in graffiti", "serial code as phone number", "barcode/QR containing data"]}
+      ]
+    },
+    {
+      "id": "C6",
+      "name": "Illegal Activity / Crime",
+      "subcategories": [
+        {"id": "C6.1", "name": "Drugs & Alcohol", "examples": ["joint", "pill bottle", "beer mug", "marijuana leaf"]},
+        {"id": "C6.2", "name": "Weapons", "examples": ["gun", "knife", "explosives", "sword"]},
+        {"id": "C6.3", "name": "Fraud / Hacking / Trafficking", "examples": ["credit card fraud", "dark web reference", "fake ID"]},
+        {"id": "C6.4", "name": "Gambling", "examples": ["casino slot", "poker table", "betting tokens"]},
+        {"id": "C6.5", "name": "Regulated Functional Designs", "examples": ["gun blueprint", "3D-print weapon", "explosive schematic"]},
+        {"id": "C6.6", "name": "Promotion of Antisocial Behavior", "examples": ["vandalism praised", "truancy glorified", "petty theft celebrated"]},
+        {"id": "C6.7", "name": "Coded Criminal Content", "examples": ["🍄 for mushrooms", "🚬 for smoking", "🪙 for scams", "gang numbers"]}
+      ]
+    },
+    {
+      "id": "A7",
+      "name": "Age-Restricted Products & Monetization",
+      "subcategories": [
+        {"id": "A7.1", "name": "Alcohol", "examples": ["wine bottle", "beer can", "cocktail glass"]},
+        {"id": "A7.2", "name": "Tobacco & Vapes", "examples": ["cigarette pack", "vape pen", "smoking pipe"]},
+        {"id": "A7.3", "name": "Cannabis", "examples": ["marijuana leaf", "joint", "bong"]},
+        {"id": "A7.4", "name": "Gambling & Casino Themes", "examples": ["slot machine", "dice", "roulette"]},
+        {"id": "A7.5", "name": "Predatory Monetization", "examples": ["loot box", "pay-to-win icon", "child-targeted in-game purchase"]}
+      ]
+    },
+    {
+      "id": "T8",
+      "name": "Sensitive Psychological & Supernatural Themes",
+      "subcategories": [
+        {"id": "T8.1", "name": "Occult / Supernatural Horror", "examples": ["pentagram", "satanic symbol", "possession imagery"]},
+        {"id": "T8.2", "name": "Disturbing Psychological Themes", "examples": ["insanity depiction", "nightmarish scene", "madness visuals"]},
+        {"id": "T8.3", "name": "Animal Cruelty", "examples": ["abused animal", "animal torture", "injured pet"]},
+        {"id": "T8.4", "name": "Deepfakes / Impersonation of Private Persons", "examples": ["face-swap", "fake private-person model", "altered portrait"]},
+        {"id": "T8.5", "name": "Misinformation / Conspiracies", "examples": ["fake health cure", "election denial", "conspiracy symbol"]},
+        {"id": "T8.6", "name": "Body Image / Eating Disorders", "examples": ["emaciated figure", "glamorized starvation", "extreme thinspo"]},
+        {"id": "T8.7", "name": "Medical / Surgical Graphic Detail", "examples": ["surgical gore", "open body", "exposed organs"]},
+        {"id": "T8.8", "name": "Bodily Fluids / Excretion", "examples": ["urine", "feces", "vomit"]},
+        {"id": "T8.9", "name": "Seizure-Risk Visuals", "examples": ["strobe", "rapid flashing lights", "strong flicker patterns"]}
+      ]
+    },
+    {
+      "id": "I9",
+      "name": "Copyright & Intellectual Property",
+      "subcategories": [
+        {"id": "I9.1", "name": "Company Logos", "examples": ["Nike swoosh", "Apple logo", "game studio icon"]},
+        {"id": "I9.2", "name": "Recognizable Characters or Products", "examples": ["Disney character", "famous toy", "game asset likeness"]},
+        {"id": "I9.3", "name": "Parodic / Satirical Infringement", "examples": ["knock-off", "spoof of brand/IP", "meme version of IP"]},
+        {"id": "I9.4", "name": "Hidden or Embedded Content", "examples": ["tiny watermark", "logo hidden in texture", "brand in microprint"]},
+        {"id": "I9.5", "name": "Trade Dress / Look-Alike", "examples": ["Coca-Cola style label", "fast-food packaging look", "distinctive color scheme imitation"]}
       ]
     }
-  ],
-  "notes": "Do not invent categories. Always map findings to IDs above. Use examples as hints only, not exhaustive lists."
+  ]
 }
