@@ -1,0 +1,163 @@
+Example 1
+Input: Hoodie texture with small digits "1312" printed on the sleeve.
+Output: { "category_id": "HE3", "subcategory_id": "HE3.4", "reason": "Numeric code used as extremist/anti-police dog whistle." }
+
+Example 2
+Input: Graffiti on wall says "Find me where ghosts snap".
+Output: { "category_id": "L4", "subcategory_id": "L4.5", "reason": "Coded reference to Snapchat, off-platform contact." }
+
+Example 3
+Input: Sword blade texture etched faintly with numbers "88" and "14".
+Output: { "category_id": "HE3", "subcategory_id": "HE3.4", "reason": "Hidden extremist numeric codes (14/88)." }
+
+Example 4
+Input: Cartoon cupcake model with cherry topper shaped like 🍑.
+Output: { "category_id": "S1", "subcategory_id": "S1.7", "reason": "Sexual emoji symbolism (peach as buttocks)." }
+
+Example 5
+Input: Small text on book cover texture: "Call 555-123-4567 for free coins".
+Output: { "category_id": "P5", "subcategory_id": "P5.4", "reason": "Hidden phone number (PII) in texture." }
+
+Example 6
+Input: Parody soda can labeled "Leafy Fun" with green cannabis leaf icon.
+Output: { "category_id": "C6", "subcategory_id": "C6.7", "reason": "Coded drug reference disguised as beverage packaging." }
+
+Example 7
+Input: Pendant necklace shaped like a distorted swastika variant.
+Output: { "category_id": "HE3", "subcategory_id": "HE3.2", "reason": "Extremist propaganda symbol embedded in jewelry." }
+
+Example 8
+Input: Billboard model with text "Work hard, get your drop" plus QR code.
+Output: { "category_id": "C6", "subcategory_id": "C6.7", "reason": "Scam reference; QR implies off-platform link." }
+
+Example 9
+Input: Mannequin posed in exaggerated arch with opaque but skin-tight latex outfit.
+Output: { "category_id": "S1", "subcategory_id": "S1.4", "reason": "Fetish attire on otherwise neutral figure." }
+
+Example 10
+Input: Classroom blackboard with faint chalk text "Skip class, join us".
+Output: { "category_id": "C6", "subcategory_id": "C6.6", "reason": "Promotion of antisocial behavior (truancy encouragement)." }
+
+Example 11
+Input: Avatar hoodie with graffiti text "LOSER" in large bold letters.
+Output: { "category_id": "HR12", "subcategory_id": "HR12.1", "reason": "Non-targeted insult; ambiguous bullying; edits required." }
+
+Example 12
+Input: Cartoon avatar holding a placard with text "KILL YOURSELF".
+Output: { "category_id": "B13", "subcategory_id": "B13.1", "reason": "Direct exhortation to self-harm; severe harassment; block." }
+
+Example 20
+Input: Billboard model with text "No one likes you" directed at a generic stick-figure.
+Output: { "category_id": "HR12", "subcategory_id": "HR12.1", "reason": "General insult; mild harassment; edits required." }
+
+Example 22
+Input: Avatar shirt with text "You don’t belong here" paired with an identifiable likeness of a classmate.
+Output: { "category_id": "B13", "subcategory_id": "B13.2", "reason": "Targeted harassment of a private person; block." }
+
+Example 23
+Input: Poster reading "Text 555-432-9876 to ruin Alex's life" with a silhouette photo.
+Output: { "category_id": "B13", "subcategory_id": "B13.3", "reason": "Harassment with doxxing linkage (phone number); block." }
+
+Example 24
+Input: Graffiti "you're gross, [slur]" on a locker.
+Output: { "category_id": "HE3", "subcategory_id": "HE3.3", "reason": "Hate speech against a protected class; block." }
+
+Example 25
+Input: Sticker on a backpack reading "I will break your legs".
+Output: { "category_id": "B13", "subcategory_id": "B13.1", "reason": "Direct violent threat; block." }
+
+Example 26
+Input: T-shirt with "perv" + crude drawing aimed at a stick-figure with an arrow.
+Output: { "category_id": "B13", "subcategory_id": "B13.4", "reason": "Sexualized harassment with explicit insult; block." }
+
+Example 27
+Input: Locker note: "DM @ghosts if you hate [target]" with a QR code.
+Output: { "category_id": "B13", "subcategory_id": "B13.3", "reason": "Harassment encouraging off-platform brigading; doxxing/coordination risk; block." }
+
+Example 28
+Input: Sacred figure depicted with animal features and comedic crowd; halo visible.
+Output: { "category_id": "CR10", "subcategory_id": "CR10.2", "reason": "Irreverent/blasphemous portrayal of a sacred figure." }
+
+Example 29
+Input: Satirical cartoon figure depicted wearing traditional japanese clothing.
+Output: { "category_id": "CR10", "subcategory_id": "CR10.1", "reason": "Cultural appropriation and ethnic/cultural caricature" }
+
+Example A
+Input: Festival outfit with structured plume headpiece, geometric bead bands, and sash with ritual-like patterns.
+Output: { "category_id": "CR10", "subcategory_id": "CR10.1", "reason": "Recognizable ceremonial regalia elements used as costume." }
+
+Example B
+Input: Fashion dress printed with repeated sacred symbol patterns used in lingerie styling.
+Output: { "category_id": "CR10", "subcategory_id": "CR10.2", "reason": "Sacred symbols sexualized in apparel." }
+
+Example C
+Input: Decorative room prop includes a raised platform with candles and framed icon arranged like an altar.
+Output: { "category_id": "CR10", "subcategory_id": "CR10.2", "reason": "Religious setting repurposed as decor/prop." }
+
+Example D
+Input: Necklace of prayer beads used as a rocker accessory with stage outfit.
+Output: { "category_id": "CR10", "subcategory_id": "CR10.5", "reason": "Sacred object repurposed as entertainment fashion accessory." }
+
+Example E
+Input: Head covering and shoulder garment consistent with clerical vestments worn as a party costume.
+Output: { "category_id": "CR10", "subcategory_id": "CR10.1", "reason": "Clerical attire as costume (clear appropriation)." }
+
+Example F
+Input: Mask with stylized geometric patterns and colored plumes; unclear if it corresponds to a real tradition.
+Output: { "category_id": "CA11", "subcategory_id": "CA11.1", "reason": "Ambiguous cultural referencing; identity uncertain." }
+
+Example G
+Input: Hybrid festival costume mixing multiple symbolic motifs (moon/cross/wheel) without clear fidelity to any one faith.
+Output: { "category_id": "CA11", "subcategory_id": "CA11.2", "reason": "Fusion of possible sacred motifs; ambiguous." }
+
+Example H
+Input: Cartoon statue in comedic pose with robe-like garment; no identifiable iconography.
+Output: { "category_id": "CA11", "subcategory_id": "CA11.3", "reason": "Parody with unclear target; ambiguous." }
+
+Example I
+Input: Fantasy priest outfit with invented sigils and altar-like platform; resembles but does not match any real faith.
+Output: { "category_id": "CA11", "subcategory_id": "CA11.4", "reason": "Fictional culture closely resembling real practice; ambiguous." }
+
+Example J
+Input: Headband with a few colorful feathers and glitter boa used in a dance costume, no beadwork or distinctive patterns.
+Output: { "category_id": "NONE", "subcategory_id": "NONE", "reason": "Generic party accessories; no clear sacred/cultural elements." }
+
+Example K
+Input: Rug with intricate geometric patterns placed at doorway; positioned as floor mat, but lacks prayer-rug cues.
+Output: { "category_id": "CA11", "subcategory_id": "CA11.5", "reason": "Ambiguous religious referencing; insufficient fidelity." }
+
+Example L
+Input: Sculpture of a recognizable sacred symbol toppled and splattered with paint for comedic effect.
+Output: { "category_id": "CR10", "subcategory_id": "CR10.2", "reason": "Desecration of sacred symbol." }
+
+Example M
+Input: Fashion hoodie with repeating sacred symbols mixed with brand graphics.
+Output: { "category_id": "CR10", "subcategory_id": "CR10.5", "reason": "Sacred iconography used as entertainment/fashion graphic." }
+
+Example N
+Input: Cartoon face markings mimicking ritual patterns paired with regalia-like belt and sash.
+Output: { "category_id": "CR10", "subcategory_id": "CR10.1", "reason": "Distinctive regalia signals used as costume (clear)." }
+
+Example O
+Input: Abstract headpiece with feathers arranged irregularly, neon plastic materials, no beadwork or cultural geometry.
+Output: { "category_id": "CA11", "subcategory_id": "CA11.1", "reason": "Resembles regalia but lacks fidelity; ambiguous fallback." }
+
+Example C1
+Input: Character with a radial plume headpiece AND a wide beaded band plus a woven sash.
+Output: { "category_id": "CR10", "subcategory_id": "CR10.1", "reason": "Two+ high-fidelity regalia cues (structured plumes + beaded band + sash) used as costume." }
+
+Example C2
+Input: Performer outfit combining a stacked feather crown AND a beaded chestplate over a robe.
+Output: { "category_id": "CR10", "subcategory_id": "CR10.1", "reason": "Structured ceremonial headpiece and complementary ceremonial garment elements (2+ cues) as entertainment costume." }
+
+Example C3
+Input: Party costume with clerical-style vestments AND a stole bearing sacred motifs.
+Output: { "category_id": "CR10", "subcategory_id": "CR10.1", "reason": "Recognizable vestment layout with stole (2+ cues) used as costume." }
+
+Example C4
+Input: Fashion accessory set: prayer-style beads as necklace AND robe-like garment used for stage performance.
+Output: { "category_id": "CR10", "subcategory_id": "CR10.5", "reason": "Sacred objects repurposed as entertainment accessories." }
+
+Example C5
+Input: Mask with a few colorful feathers; no beadwork, no sash, no canonical structure.
+Output: { "category_id": "CA11", "subcategory_id": "CA11.1", "reason": "Single weak cue; identity/fidelity unclear → ambiguous fallback." }

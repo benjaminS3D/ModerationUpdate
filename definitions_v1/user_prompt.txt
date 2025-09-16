@@ -1,0 +1,3 @@
+Evaluate the following single image of a 3D model. Use the taxonomy in the system message.
+Return ONLY the JSON specified in the system message under OUTPUT. Do not include any extra text.
+If nothing problematic is present, return an empty "flags": [].
