@@ -20,14 +20,14 @@ class ModerationAgent:
         self.user_prompt = user_prompt
 
 
-    def taxonomy_label_image(self, img_b64):
+    def taxonomy_label_image(self, img_b64_png):
         messages = [
             {"role": "system", "content": self.system_prompt},
             {
                 "role": "user",
                 "content": [
                     {"type": "text", "text": self.user_prompt},
-                    {"type": "image_url", "image_url": {"url": img_b64}}
+                    {"type": "image_url", "image_url": {"url": f"data:image/png;base64,{img_b64_png}"}}
                 ]
             }
         ]
@@ -72,19 +72,19 @@ class ModerationAgent:
 
 
 
-    def process_image(self, _img_64, name):
-        response = self.taxonomy_label_image(_img_64)
+    def process_image(self, _img_64_png, name):
+        response = self.taxonomy_label_image(_img_64_png)
         return (
             name,
             response
         )
 
-    def moderate_images(self, image_dict: dict):
+    def moderate_images(self, image_png_dict: dict):
         taxonomy_moderation_results = {}
 
 
         with concurrent.futures.ThreadPoolExecutor() as executor:
-            futures = [executor.submit(self.process_image, image, name) for name, image in image_dict.items()]
+            futures = [executor.submit(self.process_image, png, name) for name, png in image_png_dict.items()]
 
             for future in concurrent.futures.as_completed(futures):
                 name, result = future.result()

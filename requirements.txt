@@ -2,3 +2,5 @@ openai
 pandas
 numpy
 pyplotlib
+pillow
+jsonschema

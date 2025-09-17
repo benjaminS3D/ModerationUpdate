@@ -25,3 +25,4 @@ Output contract
   * <0.40: weak; avoid flags unless safety-critical (still requires_human=true)
 
 Return only the JSON object.
+w

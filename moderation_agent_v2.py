@@ -6,17 +6,12 @@
 # - Always returns schema-shaped JSON (best-effort coercion if LLM deviates)
 
 from __future__ import annotations
-import base64
-import io
 import json
+import os
 import re
 from dataclasses import dataclass
+from pathlib import Path
 from typing import Any, Dict, List, Optional
-
-try:
-    from PIL import Image
-except ImportError:
-    raise ImportError("Please install Pillow: pip install Pillow")
 
 # Optional JSON Schema validation (recommended)
 try:
@@ -31,7 +26,6 @@ class ModerationAgentConfig:
     base_path: str = "."                      # folder containing taxonomy.json, schema.json, vision_system_prompt.txt
     vision_model: Optional[str] = None
     validate_schema: bool = True
-    max_image_px: int = 1536                  # downscale long side before encoding
     enforce_clear_over_ambiguous: bool = True # drops ambiguous flags when a clear one exists in same family
 
 
@@ -59,6 +53,7 @@ class ModerationAgent:
         self.taxonomy = self._load_json_file("taxonomy.json")
         self.schema = self._load_json_file("schema.json")
         self.base_system_prompt = self._load_text_file("vision_system_prompt.txt")
+        self.few_shot = self._load_text_file("few_shot_examples.txt")
         self.taxonomy_version = self.taxonomy.get("taxonomy_version", "Secur3D-Taxonomy-v1.0")
 
         # Pre-render a compact taxonomy string for the prompt
@@ -80,14 +75,7 @@ class ModerationAgent:
         full_system_prompt = self._compose_system_prompt()
 
         out: Dict[str, Dict[str, Any]] = {}
-        for img_id, data_url in image_dict.items():
-            pil_img = self._decode_data_url_to_image(data_url)
-            pil_img = self._maybe_downscale(pil_img, self.config.max_image_px)
-
-            # Encode to base64 PNG for transport
-            buf = io.BytesIO()
-            pil_img.save(buf, format="PNG")
-            img_b64 = base64.b64encode(buf.getvalue()).decode("utf-8")
+        for img_id, img_b64 in image_dict.items():
 
             user_instructions = (
                 "Analyze the single image of a rendered 3D model. "
@@ -169,10 +157,18 @@ class ModerationAgent:
 
     def _compose_system_prompt(self) -> str:
         """Combine the base prompt + rendered taxonomy + schema into a single authoritative system message."""
+
         parts = [
             self.base_system_prompt.strip(),
             "\n\n# Taxonomy (authoritative)\n",
             self.rendered_taxonomy,
+        ]
+
+        if getattr(self, "few_shot", None) is not None:
+            parts.append("\n\n# Few-shot examples\n")
+            parts.append(str(self.few_shot))
+
+        parts += [
             "\n\n# Output JSON Schema (authoritative)\n",
             self.rendered_schema,
             "\n\n# Required behaviors\n",
@@ -197,26 +193,6 @@ class ModerationAgent:
         return "\n".join(lines)
 
     # ---------- Decoding / utils ----------
-
-    def _decode_data_url_to_image(self, data_url: str) -> Image.Image:
-        if not data_url.startswith("data:"):
-            raise ValueError("Expected data URL (data:*;base64,...)")
-        try:
-            b64 = data_url.split(",", 1)[1]
-        except Exception:
-            raise ValueError("Malformed data URL; missing comma separator.")
-        img_bytes = base64.b64decode(b64, validate=False)
-        return Image.open(io.BytesIO(img_bytes)).convert("RGBA")
-
-    def _maybe_downscale(self, img: Image.Image, max_side: int) -> Image.Image:
-        w, h = img.size
-        long_side = max(w, h)
-        if long_side <= max_side:
-            return img
-        scale = max_side / float(long_side)
-        new_size = (max(1, int(w * scale)), max(1, int(h * scale)))
-        return img.resize(new_size, Image.LANCZOS)
-
     def _safe_parse_json(self, s: str) -> Optional[Dict[str, Any]]:
         if not s:
             return None
@@ -224,7 +200,7 @@ class ModerationAgent:
             return json.loads(s)
         except Exception:
             pass
-        m = re.search(r"\{.*\}", s, re.DOTALL)
+        m = re.search(r"\{.*\}", s, re.DOTALL) # if parse fails this searches the string for the first json like section and tries to parse that
         if m:
             try:
                 return json.loads(m.group(0))
@@ -327,11 +303,15 @@ class ModerationAgent:
     # ---------- file I/O ----------
 
     def _load_json_file(self, name: str) -> Dict[str, Any]:
-        path = f"{self.config.base_path.rstrip('/')}/{name}"
-        with open(path, "r", encoding="utf-8") as f:
+        path = os.path.join(self.config.base_path, name)
+        if not Path(path).exists():
+            raise FileNotFoundError(f"File {path} does not exist")
+        with open(path, "rb") as f:
             return json.load(f)
 
-    def _load_text_file(self, name: str) -> str:
-        path = f"{self.config.base_path.rstrip('/')}/{name}"
-        with open(path, "r", encoding="utf-8") as f:
+    def _load_text_file(self, name: str) -> str | None:
+        path = os.path.join(self.config.base_path, name)
+        if not Path(path).exists():
+            return None
+        with open(path, "r", encoding='utf-8') as f:
             return f.read()
