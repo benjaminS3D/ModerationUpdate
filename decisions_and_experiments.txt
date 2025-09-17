@@ -1,0 +1,74 @@
+﻿*this is a summary chat gpt created from our chat
+
+Decisions and Experiments to Date
+Design Decisions
+
+Classification-only model: Enforcement is handled separately. The agent’s responsibility is reporting.
+
+Multi-label detection: The agent must report all applicable issues, not just the most severe.
+
+Ambiguity categories: Certain categories have “clear” and “ambiguous” branches (e.g., CR10 vs. CA11, HR12 vs. B13). This allows fallback when confidence is low.
+
+Verbatim text capture: All visible text fragments are recorded exactly as they appear.
+
+Sanitized rationales: Explanations must be concrete and specific but must not repeat slurs verbatim.
+
+Safety-first principle: False positives are acceptable; missed harms are not.
+
+Cross-flagging: Multiple categories can and should be flagged if co-occurring (e.g., Religious Desecration + Alcohol).
+
+Taxonomy Refinements
+
+Split Harassment:
+
+HR12 = Bullying & Harassment (Ambiguous/Mild)
+
+B13 = Bullying & Harassment (Severe/Clear)
+
+Split Cultural/Religious:
+
+CR10 = Cultural & Religious Respect (Clear Violations)
+
+CA11 = Contextual / Ambiguous Cultural Sensitivity
+
+Expanded CR10.1 (Cultural Appropriation) with clearer cues (structured regalia, beadwork, robes).
+
+Added fallback categories (CA11.1–CA11.5) for ambiguous referencing, fusion motifs, and fictionalized but similar designs.
+
+Expanded examples across multiple cultures and item types (headpieces, robes, sacred objects, symbols, rituals).
+
+Experiments Conducted
+
+Validation images:
+
+Models with clown costumes and feathered headpieces tested ambiguity vs. clear cultural appropriation.
+
+Religious statues holding alcohol tested multi-flagging (CR10.2 + A7.1).
+
+Observations:
+
+Initial taxonomy flagged clear appropriation but sometimes missed ambiguous cases.
+
+After spine and example updates, ambiguous cases were flagged, but some clear cases downgraded to ambiguous → added “upgrade checklist” and precedence rule.
+
+Religious desecration correctly flagged, but alcohol was initially missed → required explicit multi-label examples and taxonomy update.
+
+Few-shot examples: Iteratively expanded to include:
+
+Clear appropriation (multi-cue regalia).
+
+Ambiguous referencing (uncertain or stylized).
+
+Desecration combined with alcohol/tobacco/weapons.
+
+Hard negatives (party feathers, abstract neon plumes) to prevent over-flagging.
+
+Current Status
+
+Agent now flags both clear and ambiguous cultural appropriation with better balance.
+
+Multi-label performance improved (e.g., sacred figure + alcohol now produces CR10.2 and A7.1).
+
+Validation set indicates high recall, though continued tuning of few-shots and taxonomy examples may further improve clarity and reduce downgrades to ambiguous categories.
+
+Next steps: broaden few-shots further, monitor performance on coded/hidden content, and test against wider cultural/religious contexts.

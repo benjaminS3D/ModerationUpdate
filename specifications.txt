@@ -1,0 +1,93 @@
+﻿*this is a summary chat gpt created from our chat
+
+Moderation Agent Project Specifications
+
+Project Summary
+
+We are developing an AI moderation agent for 3D models intended for use in games, virtual environments, and online experiences targeted at children and minors. The system must detect and report any content that could be unsafe, harmful, inappropriate, or otherwise unsuitable for minors. The agent’s role is classification only; it produces structured reports, while enforcement is handled by a separate system.
+
+Core Goals
+
+Protect minors from harm by flagging explicit, suggestive, illegal, hateful, IP-infringing, and coded/hidden content.
+
+Err on the side of caution: prefer false positives (extra review) over false negatives (missed harmful content).
+
+Multi-label detection: always report all applicable issues; never stop at the first violation.
+
+Ambiguity handling: if content might be problematic but is uncertain, classify under the relevant ambiguous category.
+
+Hidden/coded signals: detect content that uses numbers, emojis, stylization, or obfuscation to bypass moderation.
+
+Text capture: extract all visible text fragments exactly as shown, including case, punctuation, emoji, and non-Latin scripts.
+
+Input
+
+A single rendered image of a 3D model (on uniform background).
+
+The evaluation concerns only the model itself: textures, attire, gestures, accessories, objects, symbols, and text.
+
+Output
+
+A structured JSON report including:
+
+taxonomy_version
+
+summary (short assessment)
+
+flags[]:
+
+category_id and subcategory_id
+
+rationale (sanitized/paraphrased reason)
+
+evidence (type + pointer to location)
+
+confidence (0.0–1.0)
+
+requires_human (true/false)
+
+text_fragments[]: verbatim captures of all visible text with pointer and optional language.
+
+Moderation Taxonomy
+
+Categories include:
+
+S1 Sexual / Adult Content
+
+V2 Violence / Harm
+
+HE3 Hate & Extremism (Clear)
+
+CR10 Cultural & Religious Respect (Clear Violations)
+
+CA11 Contextual / Ambiguous Cultural Sensitivity
+
+HR12 Bullying & Harassment (Mild / Ambiguous)
+
+B13 Bullying & Harassment (Severe / Clear)
+
+L4 Profanity, Language & Contact
+
+P5 Privacy & Doxxing
+
+C6 Illegal Activity / Crime
+
+A7 Age-Restricted Products & Monetization
+
+T8 Sensitive Psychological & Supernatural Themes
+
+I9 Copyright & Intellectual Property
+
+Each category contains specific subcategories (e.g., CR10.1 = Cultural Appropriation, CA11.1 = Ambiguous Cultural Referencing).
+
+Principles
+
+Safety-first: flag if uncertain.
+
+Multi-flagging: return all relevant categories, especially in multi-violation cases (e.g., sacred figure + alcohol).
+
+Clear > Ambiguous precedence: prefer clear category when confidence is sufficient; ambiguous is fallback.
+
+Non-refusal: never safe-complete; always return structured JSON.
+
+Cross-flagging: report co-occurring violations across categories.
