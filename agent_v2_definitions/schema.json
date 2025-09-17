@@ -1,0 +1,78 @@
+﻿{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["taxonomy_version", "summary", "flags", "text_fragments"],
+  "properties": {
+    "taxonomy_version": {"type": "string"},
+    "summary": {"type": "string", "minLength": 1, "maxLength": 240},
+    "flags": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["category_id", "subcategory_id", "rationale", "evidence", "confidence", "requires_human"],
+        "properties": {
+          "category_id": {"type": "string"},
+          "subcategory_id": {"type": "string"},
+          "rationale": {"type": "string"},
+          "evidence": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": ["type", "pointer"],
+              "properties": {
+                "type": {"type": "string", "enum": ["texture", "geometry", "animation", "text", "metadata"]},
+                "pointer": {
+                  "type": "object",
+                  "required": ["region"],
+                  "properties": {
+                    "region": {
+                      "type": "object",
+                      "required": ["x", "y", "w", "h"],
+                      "properties": {
+                        "x": {"type": "number"},
+                        "y": {"type": "number"},
+                        "w": {"type": "number", "minimum": 0},
+                        "h": {"type": "number", "minimum": 0}
+                      }
+                    },
+                    "object_hint": {"type": "string"},
+                    "view_hint": {"type": "string"}
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "confidence": {"type": "number", "minimum": 0.0, "maximum": 1.0},
+          "requires_human": {"type": "boolean"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "text_fragments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["text", "pointer"],
+        "properties": {
+          "text": {"type": "string"},
+          "pointer": {
+            "type": "object",
+            "required": ["x", "y", "w", "h"],
+            "properties": {
+              "x": {"type": "number"},
+              "y": {"type": "number"},
+              "w": {"type": "number", "minimum": 0},
+              "h": {"type": "number", "minimum": 0}
+            }
+          },
+          "lang": {"type": "string"}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

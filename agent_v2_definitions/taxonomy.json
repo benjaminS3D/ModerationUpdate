@@ -1,0 +1,126 @@
+﻿{
+  "taxonomy_version": "Secur3D-Taxonomy-v1.0",
+  "categories": [
+    {
+      "id": "S1",
+      "name": "Sexual / Adult Content",
+      "subcategories": [
+        {"id": "S1.1", "name": "Nudity (explicit)", "description": "Exposure of genitals or areolas, explicit anatomical detail."},
+        {"id": "S1.2", "name": "Nudity (partial/implied)", "description": "Partial or implied exposure (sheer textures, strategic coverage)."},
+        {"id": "S1.3", "name": "Sexualized pose/gestures", "description": "Suggestive body posing, suggestive hand or tongue gestures."},
+        {"id": "S1.4", "name": "Sexual objects/symbolism", "description": "Objects/toys or overtly sexual symbolism included as props or textures."},
+        {"id": "S1.5", "name": "Fetish/kink attire or paraphernalia", "description": "Bondage gear, explicit fetish costumes, paraphernalia."},
+        {"id": "S1.6", "name": "Suggestive minors / childlike models (ambiguous)", "description": "Childlike proportions or cues in adult contexts; ambiguous—flag for review."},
+        {"id": "S1.7", "name": "Sexual exploitation indicators (clear)", "description": "Clear sexual exploitation cues including commercialization of sexual content."}
+      ]
+    },
+    {
+      "id": "V2",
+      "name": "Violence / Harm",
+      "subcategories": [
+        {"id": "V2.1", "name": "Weapons (lethal)", "description": "Firearms, swords, explosives clearly depicted."},
+        {"id": "V2.2", "name": "Weapons (non-lethal)", "description": "Batons, tasers, improvised weapons."},
+        {"id": "V2.3", "name": "Blood/gore (graphic)", "description": "Graphic depiction of blood, severed parts, or gore textures."},
+        {"id": "V2.4", "name": "Injury/harm (non-graphic)", "description": "Bruises, minor blood, implied injury."},
+        {"id": "V2.5", "name": "Threatening pose/intent", "description": "Aggressive stance with implied intent to harm."}
+      ]
+    },
+    {
+      "id": "HE3",
+      "name": "Hate & Extremism (Clear)",
+      "subcategories": [
+        {"id": "HE3.1", "name": "Extremist symbols/insignia (clear)", "description": "Recognized extremist insignia, banners, or patches."},
+        {"id": "HE3.2", "name": "Hate slogans/gestures (clear)", "description": "Recognized hate slogans or gestures."},
+        {"id": "HE3.3", "name": "Uniforms/attire linked to extremist orgs (clear)", "description": "Attire closely associated with extremist groups."}
+      ]
+    },
+    {
+      "id": "CR10",
+      "name": "Cultural & Religious Respect (Clear Violations)",
+      "subcategories": [
+        {"id": "CR10.1", "name": "Desecration/profanation of sacred figures/objects (clear)", "description": "Degrading context for sacred figures, icons, or objects."},
+        {"id": "CR10.2", "name": "Holy texts/symbols misused with degrading context (clear)", "description": "Holy texts/symbols used in insulting or degrading ways."}
+      ]
+    },
+    {
+      "id": "CA11",
+      "name": "Contextual / Ambiguous Cultural Sensitivity",
+      "subcategories": [
+        {"id": "CA11.1", "name": "Potential misappropriation of cultural attire/sacred regalia (ambiguous)", "description": "Attire/regalia used without clear respectful context—ambiguous."},
+        {"id": "CA11.2", "name": "Stereotypical caricatures (ambiguous)", "description": "Caricatures or stylizations that may demean a culture—ambiguous."}
+      ]
+    },
+    {
+      "id": "HR12",
+      "name": "Bullying & Harassment (Mild / Ambiguous)",
+      "subcategories": [
+        {"id": "HR12.1", "name": "Insults/derision (mild/ambiguous)", "description": "Insulting text or cues without explicit slurs—ambiguous."},
+        {"id": "HR12.2", "name": "Mocking stereotypes (ambiguous)", "description": "Mocking depictions without explicit hateful language—ambiguous."}
+      ]
+    },
+    {
+      "id": "B13",
+      "name": "Bullying & Harassment (Severe / Clear)",
+      "subcategories": [
+        {"id": "B13.1", "name": "Degrading, dehumanizing content (clear)", "description": "Directly dehumanizing labels or depictions."},
+        {"id": "B13.2", "name": "Threats/targeted harassment (clear)", "description": "Explicit threats or targeted calls to harm."}
+      ]
+    },
+    {
+      "id": "L4",
+      "name": "Profanity, Language & Contact",
+      "subcategories": [
+        {"id": "L4.1", "name": "Profanity/cursing", "description": "Profane language on textures/signage."},
+        {"id": "L4.2", "name": "Sexual language", "description": "Sexual phrases or innuendo in text."},
+        {"id": "L4.3", "name": "Contact solicitation", "description": "“DM/PM/chat me” or similar solicitations."},
+        {"id": "L4.4", "name": "Personal data request (contact channels)", "description": "Requests to share contact info or channels."}
+      ]
+    },
+    {
+      "id": "P5",
+      "name": "Privacy & Doxxing",
+      "subcategories": [
+        {"id": "P5.1", "name": "Personal identifiers", "description": "Phone numbers, emails, addresses, IDs."},
+        {"id": "P5.2", "name": "Credential hints (codes/QR/barcodes)", "description": "Barcodes, QR codes, IDs visible."}
+      ]
+    },
+    {
+      "id": "C6",
+      "name": "Illegal Activity / Crime",
+      "subcategories": [
+        {"id": "C6.1", "name": "Drugs/illicit substances or paraphernalia", "description": "Narcotics, pipes, syringes; illegal-use cues."},
+        {"id": "C6.2", "name": "Theft/burglary tools/acts", "description": "Lockpicks, crowbars in theft context."},
+        {"id": "C6.3", "name": "Explosives/illegal weapons", "description": "Explosive devices or illegal armaments."},
+        {"id": "C6.4", "name": "Fraud/scams (textual solicitation)", "description": "Scam-like messages or solicitations in text."}
+      ]
+    },
+    {
+      "id": "A7",
+      "name": "Age-Restricted Products & Monetization",
+      "subcategories": [
+        {"id": "A7.1", "name": "Alcohol", "description": "Bottles/cans/labels clearly indicating alcohol."},
+        {"id": "A7.2", "name": "Tobacco/vapes", "description": "Cigarettes, cigars, vapes and related items."},
+        {"id": "A7.3", "name": "Gambling/lottery cues", "description": "Dice, slots, betting signage or prompts."},
+        {"id": "A7.4", "name": "Paid adult services solicitation", "description": "Text or cues offering adult services for money."}
+      ]
+    },
+    {
+      "id": "T8",
+      "name": "Sensitive Psychological & Supernatural Themes",
+      "subcategories": [
+        {"id": "T8.1", "name": "Self-harm/suicide references (non-graphic)", "description": "Non-graphic references to self-harm/suicide."},
+        {"id": "T8.2", "name": "Disturbing horror imagery (for minors)", "description": "Frightening imagery inappropriate for children."},
+        {"id": "T8.3", "name": "Occult/demonic symbolism (contextual concern)", "description": "Occult symbols that may be sensitive in kid spaces."}
+      ]
+    },
+    {
+      "id": "I9",
+      "name": "Copyright & Intellectual Property",
+      "subcategories": [
+        {"id": "I9.1", "name": "Trademarked logos (clear)", "description": "Recognizable brand logos/symbols."},
+        {"id": "I9.2", "name": "Character/IP likeness (clear)", "description": "Recognizable protected characters/franchises."},
+        {"id": "I9.3", "name": "Counterfeit/brand confusion indicators (ambiguous)", "description": "Stylized lookalikes suggesting protected IP—ambiguous."}
+      ]
+    }
+  ]
+}
